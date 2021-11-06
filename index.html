@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>str to arr</title>
+</head>
+
+<body>
+<script>
+let arr = []
+function solution(str) {
+  if(str.length == 0){return arr}
+  arr.push(str.slice(0,2))      
+  if(str.length >= 2) dell(str.slice(2))
+  return arr
+}
+function dell(str){
+  let one = str.length<2? '_':''
+  str.length>0? solution(str + one) : ''
+}
+console.log(solution("abcdefg"))
+</script>
+</body>
+
+</html>
